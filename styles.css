@@ -19,6 +19,15 @@ button{font:inherit}
 .cursor-dot{width:12px;height:12px;border:2px solid var(--pink);border-radius:50%;position:fixed;z-index:100;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:width .15s,height .15s}
 .cursor-dot.active{width:34px;height:34px;background:var(--pink);mix-blend-mode:normal}
 
+.countdown-strip{position:fixed;top:72px;left:0;right:0;z-index:39;background:rgba(248,246,243,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(10px);font-family:var(--mono);height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(9,9,9,.08)}
+.countdown-strip__inner{width:min(1200px,calc(100vw - 4rem));display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.countdown-label{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.countdown-timer{display:flex;align-items:center;gap:1.2rem}
+.countdown-unit{min-width:70px;display:grid;grid-template-columns:auto auto;align-items:center;gap:.45rem;border-left:1px solid var(--line);padding-left:.7rem}
+.countdown-unit:first-child{border-left:none;padding-left:0}
+.countdown-value{font-size:1rem;font-weight:700;line-height:1;color:var(--pink)}
+.countdown-unit-label{font-size:.58rem;font-weight:500;letter-spacing:.12em;color:var(--muted)}
+
 .intro{position:fixed;inset:0;background:var(--pink);z-index:90;display:grid;place-items:center;transition:transform .9s cubic-bezier(.8,0,.2,1)}
 .intro.hidden{transform:translateY(-100%)}
 .intro__inner{text-align:center;padding:2rem}
@@ -121,6 +130,12 @@ footer{display:flex;justify-content:space-between;padding:1rem 2rem;border-top:1
   .site-header{height:60px;padding:0 1rem}
   .site-header nav{display:none}
   .header-tag{padding:.55rem;font-size:.55rem}
+  .countdown-strip{top:60px;height:auto;min-height:54px}
+  .countdown-strip__inner{flex-wrap:wrap;justify-content:center}
+  .countdown-label{text-align:center}
+  .countdown-timer{flex-wrap:wrap;justify-content:center;gap:.5rem}
+  .countdown-unit{min-width:56px}
+  .countdown-unit-label{font-size:.52rem}
   .hero{min-height:650px}
   .hero__person{width:130vw;bottom:1%}
   .hero__copy{left:1rem;top:18%;max-width:180px}
