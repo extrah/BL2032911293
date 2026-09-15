@@ -1,4 +1,4 @@
-# BLUDLUNG 360
+
 
 React dashboard built with Vite, ready for GitHub Pages.
 
