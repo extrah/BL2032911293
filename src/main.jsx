@@ -12,10 +12,10 @@ import achievementBadge from '../xbox-achievement-badge.png';
 
 // Replace the placeholder URLs in one place when the real profiles are ready.
 export const SOCIAL_LINKS = {
-  tiktok: 'https://www.tiktok.com/@REPLACE_ME',
-  discord: 'https://discord.gg/REPLACE_ME',
-  twitter: 'https://x.com/REPLACE_ME',
-  youtube: 'https://youtube.com/@REPLACE_ME',
+  tiktok: 'https://www.tiktok.com/@bludlung',
+  discord: 'https://discord.gg/Ukp75FpJS',
+  twitter: 'https://x.com/30theorybl',
+  youtube: 'https://youtube.com/@bludlung',
 };
 
 const LINKS = [
