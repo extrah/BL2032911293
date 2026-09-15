@@ -3,6 +3,12 @@ import { createRoot } from 'react-dom/client';
 import { ArrowDown, ArrowUp, ChevronDown, ChevronRight, Gamepad2, Info, Music2, Music3, Trophy, Volume2, VolumeX, X } from 'lucide-react';
 import { siDiscord, siTiktok, siX, siYoutube } from 'simple-icons';
 import './styles.css';
+import blackOpsCover from '../1.png';
+import blackOpsTwoCover from '../2.png';
+import warfareTwoCover from '../3.png';
+import mw3Cover from '../4.png';
+import avatar from '../avatar.png';
+import achievementBadge from '../xbox-achievement-badge.png';
 
 // Replace the placeholder URLs in one place when the real profiles are ready.
 export const SOCIAL_LINKS = {
@@ -13,10 +19,10 @@ export const SOCIAL_LINKS = {
 };
 
 const LINKS = [
-  { id: 'tiktok', title: 'BLUDLUNG: BLACK OPS', platform: 'TikTok', image: '/1.png', achievements: '69/69', gamerscore: '4200/4200 G', descriptor: 'short-form tactical nonsense' },
-  { id: 'discord', title: 'BLUDLUNG: BLACK OPS II', platform: 'Discord', image: '/2.png', achievements: '50/50', gamerscore: '1000/1000 G', descriptor: 'the lobby is probably open' },
-  { id: 'twitter', title: 'BLUDLUNG WARFARE 2', platform: 'Twitter / X', image: '/3.png', achievements: '29/29', gamerscore: '555/555 G', descriptor: 'live commentary from underground' },
-  { id: 'youtube', title: 'BLUDLUNG MW3', platform: 'YouTube', image: '/4.png', achievements: '24/24', gamerscore: '470/470 G', descriptor: 'long-form evidence archive' },
+  { id: 'tiktok', title: 'BLUDLUNG: BLACK OPS', platform: 'TikTok', image: blackOpsCover, achievements: '69/69', gamerscore: '4200/4200 G', descriptor: 'short-form tactical nonsense' },
+  { id: 'discord', title: 'BLUDLUNG: BLACK OPS II', platform: 'Discord', image: blackOpsTwoCover, achievements: '50/50', gamerscore: '1000/1000 G', descriptor: 'the lobby is probably open' },
+  { id: 'twitter', title: 'BLUDLUNG WARFARE 2', platform: 'Twitter / X', image: warfareTwoCover, achievements: '29/29', gamerscore: '555/555 G', descriptor: 'live commentary from underground' },
+  { id: 'youtube', title: 'BLUDLUNG MW3', platform: 'YouTube', image: mw3Cover, achievements: '24/24', gamerscore: '470/470 G', descriptor: 'long-form evidence archive' },
 ];
 
 const PLATFORM_ICONS = { TikTok: siTiktok, Discord: siDiscord, 'Twitter / X': siX, YouTube: siYoutube };
@@ -41,7 +47,7 @@ function Orb() {
 function Header({ muted, setMuted, onAbout, unlockedCount }) {
   return <header className="site-header">
     <div className="profile-status">
-      <div className="gamer-profile"><div className="profile-copy"><strong>bludlung</strong><small>69,420 <i className="profile-g-badge">G</i></small><em className="achievement-progress">{unlockedCount}/{ACHIEVEMENTS.length} ACHIEVEMENTS</em></div><div className="profile-avatar"><img src="/avatar.png" alt="bludlung profile" /></div></div>
+      <div className="gamer-profile"><div className="profile-copy"><strong>bludlung</strong><small>69,420 <i className="profile-g-badge">G</i></small><em className="achievement-progress">{unlockedCount}/{ACHIEVEMENTS.length} ACHIEVEMENTS</em></div><div className="profile-avatar"><img src={avatar} alt="bludlung profile" /></div></div>
       <button className="icon-button" onClick={onAbout} aria-label="Open about panel" title="About"><span className="question-mark">?</span></button>
       <button className="icon-button" onClick={() => setMuted(!muted)} aria-label={muted ? 'Unmute interface sounds' : 'Mute interface sounds'} title={muted ? 'Unmute' : 'Mute'}>{muted ? <VolumeX size={16} /> : <Volume2 size={16} />}</button>
     </div>
@@ -95,7 +101,7 @@ function AboutBlade({ onClose }) {
 }
 
 function XboxBadge() {
-  return <div className="xbox-badge" aria-hidden="true"><img src="/xbox-achievement-badge.png" alt="" /></div>;
+  return <div className="xbox-badge" aria-hidden="true"><img src={achievementBadge} alt="" /></div>;
 }
 
 function Toast({ toast }) {
